@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/inventory-postgres-demo/"
+title = "Inventory Migration Demo"
+description = "A separate migration-demo version of the Fieldnote inventory app. It retains search, stock adjustment and low-stock warnings, with an API-backed PostgreSQL store and adjustment history."
+version = "1.0.0"
+id = "artifacts/inventory-postgres-demo"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/inventory-postgres-demo/" ]
+localPort = 20228
+
+[services.development]
+run = "pnpm --filter @workspace/inventory-postgres-demo run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/inventory-postgres-demo", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/inventory-postgres-demo/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20228"
+BASE_PATH = "/inventory-postgres-demo/"

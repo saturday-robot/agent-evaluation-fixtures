@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Inventory App"
+description = "A lightweight inventory tracker with searchable synthetic products, stock adjustments, and low-stock alerts backed by in-memory Node API data."
+version = "1.0.0"
+id = "artifacts/inventory-app"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24449
+
+[services.development]
+run = "pnpm --filter @workspace/inventory-app run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/inventory-app", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/inventory-app/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24449"
+BASE_PATH = "/"
