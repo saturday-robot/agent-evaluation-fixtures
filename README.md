@@ -1,5 +1,11 @@
-# Retool evaluation projects
+# Customer orders
 
-Synthetic projects for coding-agent evaluations. Each branch is a separate starting state; use the pinned commit in Gauge. These general fixtures were created with Codex, not Lovable, Bolt, Replit or Claude chat. No customer data or live credentials.
+Synthetic general React fixture, created with Codex. Not an export from a named app builder.
 
-Branches: order-tracker, dispatch-board, inventory-local, orders-login, csv-inputs, approval-spreadsheet, empty-project.
+## Run
+
+Node 22+. `npm ci`, then `npm run dev`. Build: `npm run build`.
+
+## Starting state
+
+Local Node API persists records to `.runtime/records.json`. Start it in a second terminal with `npm run server`. Login accounts: `alex` / `demo-alex-123` and `sam` / `demo-sam-123`. These are public synthetic demo accounts, not service credentials. Both can edit all records. No roles, audit history or deployment. Local-only evaluation; not production authentication.
