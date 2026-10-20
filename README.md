@@ -1,5 +1,3 @@
-# Retool evaluation projects
+# CSV cleanup inputs
 
-Synthetic projects for coding-agent evaluations. Each branch is a separate starting state; use the pinned commit in Gauge. These general fixtures were created with Codex, not Lovable, Bolt, Replit or Claude chat. No customer data or live credentials.
-
-Branches: order-tracker, dispatch-board, inventory-local, orders-login, csv-inputs, approval-spreadsheet, empty-project.
+Synthetic uploaded customer and order CSVs. No application or cleanup implementation. Inputs include whitespace, mixed case, duplicate IDs, missing/invalid emails, inconsistent country names, currency formats, mixed date formats, invalid amounts and an orphaned customer reference. Preserve source files. Ambiguous/invalid records should be flagged for review rather than silently invented.

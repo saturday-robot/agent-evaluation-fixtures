@@ -1,0 +1,6 @@
+customer_id,name,email,country
+1, Example One ,ONE@example.invalid,us
+2,Example Two,two@example.invalid,USA
+1,Example One,one@example.invalid,United States
+3,Example Three,,uk
+4,Example Four,not-an-email,GB
