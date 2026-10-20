@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "customer": "SKU-001",
+    "item": "Keyboard",
+    "quantity": 2,
+    "status": "In stock"
+  },
+  {
+    "id": 2,
+    "customer": "SKU-002",
+    "item": "Laptop",
+    "quantity": 4,
+    "status": "In stock"
+  },
+  {
+    "id": 3,
+    "customer": "SKU-003",
+    "item": "Monitor",
+    "quantity": 6,
+    "status": "In stock"
+  },
+  {
+    "id": 4,
+    "customer": "SKU-004",
+    "item": "Keyboard",
+    "quantity": 8,
+    "status": "In stock"
+  },
+  {
+    "id": 5,
+    "customer": "SKU-005",
+    "item": "Laptop",
+    "quantity": 10,
+    "status": "In stock"
+  },
+  {
+    "id": 6,
+    "customer": "SKU-006",
+    "item": "Monitor",
+    "quantity": 12,
+    "status": "In stock"
+  },
+  {
+    "id": 7,
+    "customer": "SKU-007",
+    "item": "Keyboard",
+    "quantity": 14,
+    "status": "In stock"
+  },
+  {
+    "id": 8,
+    "customer": "SKU-008",
+    "item": "Laptop",
+    "quantity": 16,
+    "status": "In stock"
+  },
+  {
+    "id": 9,
+    "customer": "SKU-009",
+    "item": "Monitor",
+    "quantity": 18,
+    "status": "In stock"
+  },
+  {
+    "id": 10,
+    "customer": "SKU-010",
+    "item": "Keyboard",
+    "quantity": 20,
+    "status": "In stock"
+  },
+  {
+    "id": 11,
+    "customer": "SKU-011",
+    "item": "Laptop",
+    "quantity": 22,
+    "status": "In stock"
+  },
+  {
+    "id": 12,
+    "customer": "SKU-012",
+    "item": "Monitor",
+    "quantity": 24,
+    "status": "In stock"
+  },
+  {
+    "id": 13,
+    "customer": "SKU-013",
+    "item": "Keyboard",
+    "quantity": 26,
+    "status": "In stock"
+  },
+  {
+    "id": 14,
+    "customer": "SKU-014",
+    "item": "Laptop",
+    "quantity": 28,
+    "status": "In stock"
+  },
+  {
+    "id": 15,
+    "customer": "SKU-015",
+    "item": "Monitor",
+    "quantity": 30,
+    "status": "In stock"
+  },
+  {
+    "id": 16,
+    "customer": "SKU-016",
+    "item": "Keyboard",
+    "quantity": 32,
+    "status": "In stock"
+  },
+  {
+    "id": 17,
+    "customer": "SKU-017",
+    "item": "Laptop",
+    "quantity": 34,
+    "status": "In stock"
+  },
+  {
+    "id": 18,
+    "customer": "SKU-018",
+    "item": "Monitor",
+    "quantity": 36,
+    "status": "In stock"
+  },
+  {
+    "id": 19,
+    "customer": "SKU-019",
+    "item": "Keyboard",
+    "quantity": 38,
+    "status": "In stock"
+  },
+  {
+    "id": 20,
+    "customer": "SKU-020",
+    "item": "Laptop",
+    "quantity": 40,
+    "status": "In stock"
+  }
+]
