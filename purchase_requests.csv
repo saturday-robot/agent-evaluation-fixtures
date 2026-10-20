@@ -1,0 +1,21 @@
+request_id,requester,department,item,amount_usd,status,approver,requested_on
+1,Example Employee 1,Sales,Software license,125,Approved,Example Manager 2,2026-10-01
+2,Example Employee 2,Finance,Travel,150,Rejected,Example Manager 3,2026-10-01
+3,Example Employee 3,Ops,Monitor,175,Pending,Example Manager 1,2026-10-01
+4,Example Employee 4,Sales,Software license,200,Approved,Example Manager 2,2026-10-01
+5,Example Employee 5,Finance,Travel,225,Rejected,Example Manager 3,2026-10-01
+6,Example Employee 6,Ops,Monitor,250,Pending,Example Manager 1,2026-10-01
+7,Example Employee 7,Sales,Software license,275,Approved,Example Manager 2,2026-10-01
+8,Example Employee 8,Finance,Travel,300,Rejected,Example Manager 3,2026-10-01
+9,Example Employee 9,Ops,Monitor,325,Pending,Example Manager 1,2026-10-01
+10,Example Employee 10,Sales,Software license,350,Approved,Example Manager 2,2026-10-01
+11,Example Employee 11,Finance,Travel,375,Rejected,Example Manager 3,2026-10-01
+12,Example Employee 12,Ops,Monitor,400,Pending,Example Manager 1,2026-10-01
+13,Example Employee 13,Sales,Software license,425,Approved,Example Manager 2,2026-10-01
+14,Example Employee 14,Finance,Travel,450,Rejected,Example Manager 3,2026-10-01
+15,Example Employee 15,Ops,Monitor,475,Pending,Example Manager 1,2026-10-01
+16,Example Employee 16,Sales,Software license,500,Approved,Example Manager 2,2026-10-01
+17,Example Employee 17,Finance,Travel,525,Rejected,Example Manager 3,2026-10-01
+18,Example Employee 18,Ops,Monitor,550,Pending,Example Manager 1,2026-10-01
+19,Example Employee 19,Sales,Software license,575,Approved,Example Manager 2,2026-10-01
+20,Example Employee 20,Finance,Travel,600,Rejected,Example Manager 3,2026-10-01

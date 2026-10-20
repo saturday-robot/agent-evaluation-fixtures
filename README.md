@@ -1,5 +1,3 @@
-# Retool evaluation projects
+# Purchase request spreadsheet
 
-Synthetic projects for coding-agent evaluations. Each branch is a separate starting state; use the pinned commit in Gauge. These general fixtures were created with Codex, not Lovable, Bolt, Replit or Claude chat. No customer data or live credentials.
-
-Branches: order-tracker, dispatch-board, inventory-local, orders-login, csv-inputs, approval-spreadsheet, empty-project.
+Synthetic CSV snapshot of a manual approval process. No app, authentication, API, shared hosting or workflow engine. Requests have requester, department, item, amount, approver and status. The current team edits the sheet manually.
