@@ -1,5 +1,5 @@
-# Retool evaluation projects
+# Power Apps approval center export
 
-Synthetic projects for coding-agent evaluations. Each branch is a separate starting state; use the pinned commit in Gauge. These general fixtures were created with Codex, not Lovable, Bolt, Replit or Claude chat. No customer data or live credentials.
+Unmodified Microsoft Power Automate Approval Center sample export and custom connector definition. Source: https://github.com/microsoft/powerapps-tools/tree/e83542c33f113d7caa5247fc7d800130a8abac37/Apps/Approvals
 
-Branches: order-tracker, dispatch-board, inventory-local, orders-login, csv-inputs, approval-spreadsheet, empty-project.
+This is a 2020 Power Apps canvas-app package, not a runnable React app or a snapshot of customer data. The package depends on a FlowApproval connector and a Power Platform environment. It can be inspected for migration planning; executing it requires a test tenant. No live credentials included. This replaces the proposed purchase-request-specific fixture with an actual public approval-center export. Microsoft license is included.
