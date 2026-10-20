@@ -1,0 +1,150 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: inventory
+    description: Synthetic inventory management
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /products:
+    get:
+      operationId: getProducts
+      tags: [inventory]
+      summary: List inventory products
+      parameters:
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Inventory products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/InventoryProduct"
+  /inventory/summary:
+    get:
+      operationId: getInventorySummary
+      tags: [inventory]
+      summary: Get inventory totals and low-stock count
+      responses:
+        "200":
+          description: Inventory summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InventorySummary"
+  /products/{productId}/adjust:
+    post:
+      operationId: adjustStock
+      tags: [inventory]
+      summary: Adjust a product's stock
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StockAdjustmentInput"
+      responses:
+        "200":
+          description: Updated product
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InventoryProduct"
+        "400":
+          description: Invalid adjustment
+        "404":
+          description: Product not found
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    InventoryProduct:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        sku:
+          type: string
+        category:
+          type: string
+        quantity:
+          type: integer
+        lowStockThreshold:
+          type: integer
+        unit:
+          type: string
+        updatedAt:
+          type: string
+      required:
+        - id
+        - name
+        - sku
+        - category
+        - quantity
+        - lowStockThreshold
+        - unit
+        - updatedAt
+    InventorySummary:
+      type: object
+      properties:
+        totalProducts:
+          type: integer
+        totalUnits:
+          type: integer
+        lowStockCount:
+          type: integer
+      required:
+        - totalProducts
+        - totalUnits
+        - lowStockCount
+    StockAdjustmentInput:
+      type: object
+      properties:
+        delta:
+          type: integer
+        reason:
+          type: string
+          minLength: 1
+      required:
+        - delta
+        - reason
+
