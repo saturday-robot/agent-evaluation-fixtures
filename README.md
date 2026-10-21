@@ -1,23 +1,25 @@
-# Agent evaluation fixtures
+# Agent evaluation projects
 
-Each branch is a separate starting project. Gauge scenarios are pinned to commits so future edits do not change a baseline. All data is synthetic. No live service credentials are included.
+Each demo project now has its own repository. This repository is the index and retains the original branches and commits for historical Gauge runs.
 
-| Starting project | Contents |
+| Project | Starting state |
 | --- | --- |
-| [order-tracker](https://github.com/saturday-robot/agent-evaluation-fixtures/tree/8c3543bfbe7b3ee941a904947ff88ddb7525be7e) | React order tracker; localStorage; no login/backend. |
-| [dispatch-board](https://github.com/saturday-robot/agent-evaluation-fixtures/tree/3b87bbad69af64000f5f0bc73088e4db5104f27a) | General React dispatch demo; no login/backend. Not a Bolt export. |
-| [inventory-local](https://github.com/saturday-robot/agent-evaluation-fixtures/tree/feac5d561440c355643f2f67550941f6aab38119) | General React inventory demo; local data; no Supabase connection. |
-| [orders-login](https://github.com/saturday-robot/agent-evaluation-fixtures/tree/1d878cbcb6b80db319b71d645abfc7659cfd06c0) | React + local Node API and JSON-file persistence. Two demo users, both can edit. No roles/audit log. |
-| [csv-inputs](https://github.com/saturday-robot/agent-evaluation-fixtures/tree/11d1e8378494c3277b7be54cad8aefa3ae1c3b39) | Dirty synthetic CSV uploads; no cleanup implementation. |
-| [approval-spreadsheet](https://github.com/saturday-robot/agent-evaluation-fixtures/tree/abc9ac35cb511ea1f351595f6af6f35af7de12a5) | Synthetic purchase-request CSV; no app. |
-| [empty-project](https://github.com/saturday-robot/agent-evaluation-fixtures/tree/a7082de814534e97ec8dd8b206a2821232c8ed5e) | Empty project, no installed integrations or credentials. |
-| [powerapps-approvals](https://github.com/saturday-robot/agent-evaluation-fixtures/tree/da54b48c5e5e96211f49c968af8524501af7a386) | Unmodified Microsoft Power Apps approval-center export and connector definition. Source and license included. |
-| [claude-purchase-approvals](https://github.com/saturday-robot/agent-evaluation-fixtures/tree/a5de0a94b960546e344d71c884b0ba5531c4ebb4) | Actual Claude-chat export. React purchase approvals; localStorage, no login/backend. |
+| [Order tracker](https://github.com/saturday-robot/eval-order-tracker) | React order tracker; browser-local data on main. The with-login branch adds a Node API, demo login and JSON-file persistence. |
+| [Dispatch board](https://github.com/saturday-robot/eval-dispatch-board) | Generic React dispatch prototype; local data, no login or backend. Created with Codex; not a Bolt export. |
+| [Inventory prototype](https://github.com/saturday-robot/eval-inventory-local) | Generic React inventory prototype; local data, no Supabase connection. |
+| [CSV inputs](https://github.com/saturday-robot/eval-csv-inputs) | Synthetic customer and order CSV files with data-quality issues. |
+| [Approval spreadsheet](https://github.com/saturday-robot/eval-approval-spreadsheet) | Synthetic purchase-request CSV; no app or automation. |
+| [Empty project](https://github.com/saturday-robot/eval-empty-project) | Empty starting project; no integrations or credentials. |
+| [Power Apps approvals](https://github.com/saturday-robot/eval-powerapps-approvals) | Microsoft approval-center export, connector definition and original license. No live tenant. |
+| [Claude purchase approvals](https://github.com/saturday-robot/eval-claude-purchase-approvals) | Claude-generated React purchase approvals; browser-local data, no login or backend. |
+| [Bolt dispatch app](https://github.com/saturday-robot/eval-bolt-dispatch) | Native Bolt dispatch app export; browser-local jobs, no login or backend. |
+| [Lovable purchase requests](https://github.com/saturday-robot/eval-lovable-purchase-requests) | Native Lovable purchase-request export; local demo mode and Supabase schema/seed. A live sandbox is separate. |
+| [Replit inventory app](https://github.com/saturday-robot/eval-replit-inventory) | Native Replit inventory export. Main uses server memory; with-postgres contains the Postgres-backed state. |
 
-## Provenance and checks
+## Making changes
 
-The general React/data fixtures were created with Codex. The Claude app was generated and exported from Claude chat. The Power Apps sample is an unmodified Microsoft export with its license. None of these is labeled as a Bolt, Lovable or Replit export.
+Edit each project in its own repository. Use branches for different starting states of the same app. Gauge scenarios remain pinned to exact commits; after changing an app, update the relevant Gauge scenario to the intended commit. Existing runs keep their original snapshot.
 
-All five React apps passed a local production build. The orders-login API was checked for unauthenticated rejection, both demo users editing records, and persisted updates. These fixtures are for isolated evaluation, not production use.
+The split preserves the original source commits and project files. Data is synthetic; a source repo does not provide live service credentials, a running database or a published Retool app.
 
-Retool-specific experience tests additionally use the official [bookstore sample](https://github.com/tryretool/bookstore_sample_app). That sample must be imported, seeded and published in a sandbox before live evaluations. CLI/MCP tests likewise require sandbox access.
+The official [Retool bookstore sample](https://github.com/tryretool/bookstore_sample_app) and other external source repos remain separate.
